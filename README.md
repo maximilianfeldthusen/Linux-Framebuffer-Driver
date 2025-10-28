@@ -45,7 +45,7 @@ static u32 pseudo\_palette[16];
 ## <a name="_g0qrb7mdnipn"></a>** Color Register Function**
 static int vfb\_setcolreg(unsigned regno, unsigned red, unsigned green,
 
-`                         `unsigned blue, unsigned transp, struct fb\_info \*info)
+ unsigned blue, unsigned transp, struct fb\_info \*info)
 
 - Sets a color in the pseudo-palette.
 - Only supports the first 16 colors (regno < 16).
