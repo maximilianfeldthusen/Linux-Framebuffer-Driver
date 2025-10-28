@@ -3,7 +3,7 @@
 
 
 
-Here’s a complete guide in **Markdown** format explaining how to compile, install, and test your Linux framebuffer driver:
+How to compile, install, and test your Linux framebuffer driver:
 
 -----
 # <a name="_gx4f1aab1kor"></a>**🛠️ How to Compile and Install a Linux Framebuffer Driver**
@@ -108,4 +108,4 @@ echo -ne '\xff\xff\xff\xff' | dd of=/dev/fb0 bs=4 count=$((800\*600))
 |8|Optionally test with dd|
 
 -----
-Let me know if you’d like help writing a framebuffer test program or integrating input devices![ ](https://github.com/ChenWendi2001/CS307-Operating-System/tree/4a1345c1bbb32895193c6e1e1ccea19ecbeba6fc/Report%2FReport%20for%20Project%201%2FReport%20for%20Project%201.md)[github.com](https://github.com/ChenWendi2001/CS307-Operating-System/tree/4a1345c1bbb32895193c6e1e1ccea19ecbeba6fc/Report%2FReport%20for%20Project%201%2FReport%20for%20Project%201.md)
+
