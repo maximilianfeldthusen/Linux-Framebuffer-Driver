@@ -114,12 +114,7 @@ Called when the module is loaded:
 \
 ` `register\_framebuffer(vfb\_info);
 
------
 
-
-
-
-How to compile, install, and test your Linux framebuffer driver:
 
 -----
 # <a name="_gx4f1aab1kor"></a>** How to Compile and Install a Linux Framebuffer Driver**
