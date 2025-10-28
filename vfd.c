@@ -11,7 +11,7 @@
 
 #include <linux/uaccess.h>
 
-#define FB\_NAME "vfd"
+#define FB\_NAME "vfb"
 
 #define XRES 800
 
