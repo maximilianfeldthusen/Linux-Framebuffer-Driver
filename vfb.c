@@ -29,9 +29,9 @@ static int vfb\_setcolreg(unsigned regno, unsigned red, unsigned green,
 
     if (regno < 16) {
 
-        `u32 val = ((red & 0xff00) << 8) | ((green & 0xff00) << 0) |
+        u32 val = ((red & 0xff00) << 8) | ((green & 0xff00) << 0) |
 
-                  `((blue & 0xff00) >> 8);
+                  ((blue & 0xff00) >> 8);
 
         pseudo\_palette[regno] = val;
 
