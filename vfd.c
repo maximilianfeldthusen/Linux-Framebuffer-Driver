@@ -25,21 +25,21 @@ static u32 pseudo\_palette[16];
 
 static int vfb\_setcolreg(unsigned regno, unsigned red, unsigned green,
 
-`                         `unsigned blue, unsigned transp, struct fb\_info \*info) {
+                         `unsigned blue, unsigned transp, struct fb\_info \*info) {
 
-`    `if (regno < 16) {
+    if (regno < 16) {
 
-`        `u32 val = ((red & 0xff00) << 8) | ((green & 0xff00) << 0) |
+        `u32 val = ((red & 0xff00) << 8) | ((green & 0xff00) << 0) |
 
-`                  `((blue & 0xff00) >> 8);
+                  `((blue & 0xff00) >> 8);
 
-`        `pseudo\_palette[regno] = val;
+        `pseudo\_palette[regno] = val;
 
-`        `return 0;
+        return 0;
 
-`    `}
+    }
 
-`    `return -EINVAL;
+    return -EINVAL;
 
 }
 
@@ -63,27 +63,27 @@ static struct fb\_ops vfb\_ops = {
 
 static int \_\_init vfb\_init(void) {
 
-`    `int size = XRES \* YRES \* BPP / 8;
+    int size = XRES \* YRES \* BPP / 8;
 
-`    `vfb\_info = framebuffer\_alloc(0, NULL);
+    vfb\_info = framebuffer\_alloc(0, NULL);
 
-`    `if (!vfb\_info)
+    if (!vfb\_info)
 
-`        `return -ENOMEM;
+        return -ENOMEM;
 
-`    `vfb\_info->screen\_base = vzalloc(size);
+    vfb\_info->screen\_base = vzalloc(size);
 
-`    `if (!vfb\_info->screen\_base) {
+    if (!vfb\_info->screen\_base) {
 
-`        `framebuffer\_release(vfb\_info);
+        framebuffer\_release(vfb\_info);
 
-`        `return -ENOMEM;
+        return -ENOMEM;
 
-`    `}
+    }
 
-`    `vfb\_info->fbops = &vfb\_ops;
+    vfb\_info->fbops = &vfb\_ops;
 
-`    `vfb\_info->fix = (struct fb\_fix\_screeninfo){
+    vfb\_info->fix = (struct fb\_fix\_screeninfo){
 
 .id = FB\_NAME,
 
@@ -95,9 +95,9 @@ static int \_\_init vfb\_init(void) {
 
 .smem\_len = size,
 
-`    `};
+    };
 
-`    `vfb\_info->var = (struct fb\_var\_screeninfo){
+    vfb\_info->var = (struct fb\_var\_screeninfo){
 
 .xres = XRES,
 
@@ -113,23 +113,23 @@ static int \_\_init vfb\_init(void) {
 
 .activate = FB\_ACTIVATE\_NOW,
 
-`    `};
+    };
 
-`    `vfb\_info->pseudo\_palette = pseudo\_palette;
+    vfb\_info->pseudo\_palette = pseudo\_palette;
 
-`    `if (register\_framebuffer(vfb\_info) < 0) {
+    if (register\_framebuffer(vfb\_info) < 0) {
 
-`        `vfree(vfb\_info->screen\_base);
+        vfree(vfb\_info->screen\_base);
 
-`        `framebuffer\_release(vfb\_info);
+        framebuffer\_release(vfb\_info);
 
-`        `return -EINVAL;
+        return -EINVAL;
 
-`    `}
+    }
 
-`    `printk(KERN\_INFO "Virtual framebuffer device registered\n");
+    printk(KERN\_INFO "Virtual framebuffer device registered\n");
 
-`    `return 0;
+`    return 0;
 
 }
 
