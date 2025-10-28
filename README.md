@@ -1,6 +1,6 @@
 
 
------
+
 # <a name="_hgbgppyf682d"></a>** Linux Framebuffer Driver Explained**
 This code defines a **virtual framebuffer device driver** for Linux. It simulates a graphical display in memory, allowing user-space applications to draw directly to a memory buffer.
 
