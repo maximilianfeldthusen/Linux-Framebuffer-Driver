@@ -117,7 +117,7 @@ Called when the module is loaded:
 
 
 -----
-# <a name="_gx4f1aab1kor"></a>** How to Compile and Install a Linux Framebuffer Driver**
+## <a name="_gx4f1aab1kor"></a>** How to Compile and Install a Linux Framebuffer Driver**
 This guide walks you through compiling and installing the virtual framebuffer driver written in C.
 
 -----
@@ -146,11 +146,11 @@ obj-m += vfb.o
 
 all:
 
-`    `make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
 clean:
 
-`    `make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
 -----
 ## <a name="_4tygmhoo9knp"></a>** Step 4: Compile the Driver**
