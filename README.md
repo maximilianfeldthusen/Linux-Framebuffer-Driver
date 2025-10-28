@@ -118,7 +118,7 @@ Called when the module is loaded:
 
 -----
 ## <a name="_gx4f1aab1kor"></a> How to Compile and Install a Linux Framebuffer Driver
-This guide walks you through compiling and installing the virtual framebuffer driver written in C.
+Howto compile and installing the virtual framebuffer driver written in C.
 
 -----
 ## <a name="_q9xxdd4c31s"></a> Step 1: Set Up Your Environment
