@@ -25,7 +25,7 @@ static u32 pseudo\_palette[16];
 
 static int vfb\_setcolreg(unsigned regno, unsigned red, unsigned green,
 
-                         `unsigned blue, unsigned transp, struct fb\_info \*info) {
+                         unsigned blue, unsigned transp, struct fb\_info \*info) {
 
     if (regno < 16) {
 
@@ -33,7 +33,7 @@ static int vfb\_setcolreg(unsigned regno, unsigned red, unsigned green,
 
                   `((blue & 0xff00) >> 8);
 
-        `pseudo\_palette[regno] = val;
+        pseudo\_palette[regno] = val;
 
         return 0;
 
