@@ -24,7 +24,7 @@ This code defines a **virtual framebuffer device driver** for Linux. It simulate
 - vmalloc.h: Memory allocation for large buffers.
 - uaccess.h: Safe user-space memory access (not used directly here).
 -----
-## <a name="_tely2vghyh5o"></a>**⚙️ Constants and Globals**
+## <a name="_tely2vghyh5o"></a>**Constants and Globals**
 #define FB\_NAME "vfb"
 
 #define XRES 800
@@ -42,7 +42,7 @@ static u32 pseudo\_palette[16];
 - vfb\_info: Pointer to framebuffer metadata.
 - pseudo\_palette: Used for color mapping in truecolor mode.
 -----
-## <a name="_g0qrb7mdnipn"></a>**🎨 Color Register Function**
+## <a name="_g0qrb7mdnipn"></a>** Color Register Function**
 static int vfb\_setcolreg(unsigned regno, unsigned red, unsigned green,
 
 `                         `unsigned blue, unsigned transp, struct fb\_info \*info)
@@ -52,7 +52,7 @@ static int vfb\_setcolreg(unsigned regno, unsigned red, unsigned green,
 - Combines RGB values into a 32-bit color value.
 - Returns 0 on success, -EINVAL on failure.
 -----
-## <a name="_eq7ucc180vaq"></a>**🛠️ Framebuffer Operations**
+## <a name="_eq7ucc180vaq"></a>** Framebuffer Operations**
 static struct fb\_ops vfb\_ops = {
 
 .owner = THIS\_MODULE,
@@ -77,7 +77,7 @@ Defines how the framebuffer behaves:
 - fb\_fillrect, fb\_copyarea, fb\_imageblit: Graphics primitives.
 - fb\_setcolreg: Custom color setup.
 -----
-## <a name="_1elab0wj8zaq"></a>**🚀 Initialization Function**
+## <a name="_1elab0wj8zaq"></a>** Initialization Function**
 static int \_\_init vfb\_init(void)
 
 Called when the module is loaded:
