@@ -82,11 +82,11 @@ static int \_\_init vfb\_init(void)
 
 Called when the module is loaded:
 
-Calculate buffer size:\
+**Calculate buffer size**:\
 \
  int size = XRES \* YRES \* BPP / 8;
 
-Allocate framebuffer info:\
+**Allocate framebuffer info**:\
 \
  vfb\_info = framebuffer\_alloc(0, NULL);
 
@@ -117,7 +117,7 @@ Allocate framebuffer info:\
 
 
 -----
-## <a name="_gx4f1aab1kor"></a>** How to Compile and Install a Linux Framebuffer Driver**
+## <a name="_gx4f1aab1kor"></a> How to Compile and Install a Linux Framebuffer Driver
 This guide walks you through compiling and installing the virtual framebuffer driver written in C.
 
 -----
