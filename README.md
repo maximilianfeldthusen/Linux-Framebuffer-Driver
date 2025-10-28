@@ -64,7 +64,7 @@ You should see:
 Virtual framebuffer device registered
 
 -----
-## <a name="_k0phr9btjjwj"></a>**🔍 Step 6: Verify the Device**
+## <a name="_k0phr9btjjwj"></a>** Step 6: Verify the Device**
 Check if the framebuffer device is available:
 
 ls /dev/fb\*
