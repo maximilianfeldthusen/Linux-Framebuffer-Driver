@@ -1,7 +1,7 @@
 
 
 
-# <a name="_hgbgppyf682d"></a>** Linux Framebuffer Driver Explained**
+## <a name="_hgbgppyf682d"></a>** Linux Framebuffer Driver Explained**
 This code defines a **virtual framebuffer device driver** for Linux. It simulates a graphical display in memory, allowing user-space applications to draw directly to a memory buffer.
 
 -----
@@ -84,35 +84,35 @@ Called when the module is loaded:
 
 **Calculate buffer size**:\
 \
-` `int size = XRES \* YRES \* BPP / 8;
+ int size = XRES \* YRES \* BPP / 8;
 
 **Allocate framebuffer info**:\
 \
-` `vfb\_info = framebuffer\_alloc(0, NULL);
+ vfb\_info = framebuffer\_alloc(0, NULL);
 
 **Allocate screen memory**:\
 \
-` `vfb\_info->screen\_base = vzalloc(size);
+ vfb\_info->screen\_base = vzalloc(size);
 
 **Set framebuffer operations**:\
 \
-` `vfb\_info->fbops = &vfb\_ops;
+ vfb\_info->fbops = &vfb\_ops;
 
 **Configure fixed screen info**:\
 \
-` `vfb\_info->fix = (struct fb\_fix\_screeninfo){ ... };
+ vfb\_info->fix = (struct fb\_fix\_screeninfo){ ... };
 
 **Configure variable screen info**:\
 \
-` `vfb\_info->var = (struct fb\_var\_screeninfo){ ... };
+ vfb\_info->var = (struct fb\_var\_screeninfo){ ... };
 
 **Assign pseudo-palette**:\
 \
-` `vfb\_info->pseudo\_palette = pseudo\_palette;
+ vfb\_info->pseudo\_palette = pseudo\_palette;
 
 **Register framebuffer**:\
 \
-` `register\_framebuffer(vfb\_info);
+ register\_framebuffer(vfb\_info);
 
 
 
