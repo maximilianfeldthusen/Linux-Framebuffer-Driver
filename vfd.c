@@ -129,19 +129,19 @@ static int \_\_init vfb\_init(void) {
 
     printk(KERN\_INFO "Virtual framebuffer device registered\n");
 
-`    return 0;
+    return 0;
 
 }
 
 static void \_\_exit vfb\_exit(void) {
 
-`    `unregister\_framebuffer(vfb\_info);
+    unregister\_framebuffer(vfb\_info);
 
-`    `vfree(vfb\_info->screen\_base);
+    vfree(vfb\_info->screen\_base);
 
-`    `framebuffer\_release(vfb\_info);
+    framebuffer\_release(vfb\_info);
 
-`    `printk(KERN\_INFO "Virtual framebuffer device unregistered\n");
+    printk(KERN\_INFO "Virtual framebuffer device unregistered\n");
 
 }
 
