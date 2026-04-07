@@ -1,7 +1,5 @@
 
-Sure! Here's how you could format the provided code explanation into GitHub-flavored Markdown:
 
-````markdown
 # Virtual Framebuffer Driver Code Breakdown
 
 This document explains the structure, key components, and functionality of the updated virtual framebuffer driver code.
