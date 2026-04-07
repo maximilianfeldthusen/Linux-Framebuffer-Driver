@@ -192,5 +192,5 @@ module_init(vfb_init);
 module_exit(vfb_exit);
 
 MODULE_LICENSE("MIT");
-MODULE_AUTHOR("Your Name");
+MODULE_AUTHOR("Maximilian Feldthusen");
 MODULE_DESCRIPTION("Advanced Virtual Framebuffer Driver with configurable resolution");
