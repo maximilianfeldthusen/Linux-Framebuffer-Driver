@@ -191,6 +191,6 @@ Declares licensing, authorship, and purpose.
 * Support multiple framebuffers (virtual monitors).
 * Integrate with DRM/KMS for modern graphics stacks.
 
-```
+
 
 
