@@ -184,12 +184,6 @@ Declares licensing, authorship, and purpose.
 
 ---
 
-## Potential Extensions
-
-* Add hardware acceleration hooks (e.g., GPU offloading).
-* Implement scrolling via `fb_pan_display`.
-* Support multiple framebuffers (virtual monitors).
-* Integrate with DRM/KMS for modern graphics stacks.
 
 
 
